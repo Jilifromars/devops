@@ -40,3 +40,7 @@ this dockerfile
 How to access the database container from your backend application? Use the deprecated
 --link or create a docker network.
 
+2-2 Document your Github Actions configurations
+Secured variables, why ?
+
+Why did we put needs: build-and-test-backend on this job?
