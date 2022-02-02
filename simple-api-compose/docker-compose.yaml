@@ -1,0 +1,26 @@
+version: '3.7'
+services: 
+  db-container: 
+    build: db/
+    networks:
+      - my-net
+
+  api-container:
+    build: api/
+    networks:
+      - my-net
+    depends_on:
+      - db-container
+    restart: always
+
+  http:
+    build: http/
+    ports: 
+      - 80:80
+    networks:
+      - my-net
+    depends_on:
+      - api-container
+
+networks:
+  my-net:
