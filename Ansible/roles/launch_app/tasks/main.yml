@@ -1,0 +1,8 @@
+---
+- name: Run app
+  docker_container:
+    name: simple-api-db
+    image: "jilifromars/tp-devops-cpe:simple-api"
+    networks:
+      - name: "network_tp03"
+      

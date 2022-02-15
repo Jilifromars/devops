@@ -1,0 +1,4 @@
+- name: Run DB
+  docker_container:
+    name: postgresdb
+    image: jilifromars/tp-devops-cpe:database

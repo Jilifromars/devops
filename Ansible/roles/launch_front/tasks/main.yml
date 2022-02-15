@@ -1,0 +1,7 @@
+---
+- name: Run Front
+  docker_container:
+    name: front
+    image: "jilifromars/tp-devops-cpe:front"
+    networks:
+      - name: "network_tp03"

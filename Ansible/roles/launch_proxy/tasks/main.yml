@@ -1,0 +1,9 @@
+---
+- name: Run proxy
+  docker_container:
+    name: http_server
+    image: "jilifromars/tp-devops-cpe:http-server"
+    networks:
+      - name: "network_tp03"
+    ports:
+      - '80:80'
